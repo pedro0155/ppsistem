@@ -1,0 +1,27 @@
+.w-75{
+    width: 75% !important;
+}
+
+.w-full{
+    width: 100% !important;
+}
+
+.center{
+    margin: 0 auto !important;
+}
+.w-50{
+    width: 50% !important;
+}
+.mt-2{
+    margin-top: 20px !important;
+}
+.mt-4{
+    margin-top: 40px !important;
+}
+
+.t-center{
+    text-align: center !important;
+}
+.t-vermelho{
+    color: #ff0033 !important;
+}

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="primefaces"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet name="css.css" library="css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:fieldset class="center w-50">
+                
+                <div class="ui-g center w-50 mt-2">
+                    
+                    <p:outputLabel value="Login"/>
+                    <p:inputText value="#{ctl.cpLogin}" class="w-full center " placeholder="Login" id="cpLogin"/>
+                    <p:tooltip for="cpLogin" position="left" value="Login"/>
+                    
+                </div>
+
+                <div class="ui-g center w-50 mt-2">
+                    
+                    <p:outputLabel value="Senha"/>
+                    <p:password value="#{ctl.cpSenha}" class="w-full center" placeholder="Senha" id="cpSenha"/>
+                    <p:tooltip for="cpSenha" position="left" value="Senha"/>
+                    
+                    
+                </div>
+                <div class="t-center mt-2">
+                    <p:outputLabel value="#{ctl.lbFalhaLogin}" class="t-vermelho" />
+                </div>
+                <div class="ui-g center w-50 mt-2">
+                    <p:commandButton action="#{ctl.btLogin(ae)}" update="@form" value="Entrar" styleClass="center w-full mt-2"/>
+                    <p:commandButton action="Principal" update="@form" value="Entrar" styleClass="center w-full mt-2"/>
+                    
+                </div>
+                
+            </p:fieldset>
+        </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="primefaces">
+    <h:head>
+        <title>Cadastro Vendedora</title>
+         <h:outputStylesheet name="css.css" library="css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:commandLink value="Voltar" action="Principal" update="@this"/>
+            <br/>
+            <p:commandLink value="ATUALIZAR" update="@form"/>
+            <p:fieldset class="w-75 center">
+                <div class="t-center">
+                    <p:outputLabel value="Cadastro de Vendedor"/>
+                </div>
+                <div class="center mt-2 w-75">
+                    <p:outputLabel value="Nome:"/>
+                    <p:inputText id="nomeVendedora" class="w-full" placeholder="Insira o nome da Vendedora" value="#{ctl.cpNomeVendedora}"/>
+                </div>
+                <div class="t-center mt-2">
+                    <p:commandButton value="Cadastrar" update="@form" action="#{ctl.btCadastroVendedora(ae)}"/>
+                </div>
+                    
+            </p:fieldset>
+            <p:fieldset class="w-75 center">
+                
+            </p:fieldset>
+        </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,7 @@
+com\mycompany\ppsistema\JakartaRestConfiguration.class
+usuario\Vendedora.class
+dao\VendedoraDAO.class
+controller\Bean.class
+dao\UsuarioDAO.class
+com\mycompany\ppsistema\resources\JakartaEE11Resource.class
+usuario\Usuario.class

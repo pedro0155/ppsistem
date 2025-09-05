@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:p="primefaces"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <title>PPSistema</title>
+        <h:outputStylesheet name="css.css" library="css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:fieldset class="w-full center">
+            <p:fieldset class="w-75 center">
+                <p:menubar>
+                    <p:menuitem value="Pedidos" icon="pi pi-inbox "/>
+                    <p:submenu label="cadastro" icon="pi pi-pencil">
+                        <p:menuitem value="Cliente" icon="pi pi-user "/>
+                        <p:menuitem value="Vendedora" icon="pi pi-user " action="cadastroVendedora"/>
+                        <p:menuitem value="Mercadoria" icon="pi pi-inbox "/>
+                        <p:menuitem value="Usuários" icon="pi pi-users "/>
+                    </p:submenu>
+                    <p:menuitem value="atualizar" icon="pi pi-inbox " update="@form"/>
+                    
+                    <f:facet name="options">
+                        <p:outputLabel value="Usuário logado: #{ctl.lbNome}" class="mt-2" />
+                    </f:facet>
+                </p:menubar>
+                
+
+
+
+
+            </p:fieldset>
+                            <div class="ui-g-12">
+                    <div class="ui-g-12 ui-lg-6">
+                        <p:commandButton class="w-full"/>
+                    </div>
+                    <div class="ui-g-12 ui-lg-6">
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+            </p:fieldset>
+        </h:form>
+    </h:body>
+</html>

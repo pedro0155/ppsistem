@@ -1,0 +1,55 @@
+-- Cria o banco de dados
+CREATE DATABASE IF NOT EXISTS PPSistema CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE PPSistema;
+
+-- Cria a tabela usuario
+CREATE TABLE IF NOT EXISTS usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    login VARCHAR(50) NOT NULL UNIQUE,
+    senha VARCHAR(100) NOT NULL
+);
+
+-- Insere o usuário admin com senha 1234
+INSERT INTO usuario (login, senha)
+VALUES ('admin', '1234');
+
+-- Cria a tabela vendedora
+CREATE TABLE IF NOT EXISTS vendedora (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nomeven VARCHAR(50) NOT NULL
+);
+
+INSERT INTO vendedora (nomeven) VALUES ("vendedora1");
+INSERT INTO vendedora (nomeven) VALUES ("vendedora2");
+INSERT INTO vendedora (nomeven) VALUES ("vendedora3");
+INSERT INTO vendedora (nomeven) VALUES ("vendedora4");
+INSERT INTO vendedora (nomeven) VALUES ("vendedora5");
+
+
+-- Cria a tabela cliente
+CREATE TABLE IF NOT EXISTS cliente (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nomecli VARCHAR(50) NOT NULL,
+    enderecocli VARCHAR(50),
+    cepcli VARCHAR(50),
+    cnpjcli VARCHAR(50),
+    telefonecli VARCHAR(50),
+    contatocli VARCHAR(50)
+);
+
+INSERT INTO cliente (nomecli,
+				enderecocli,
+                cepcli,
+                cnpjcli,
+                telefonecli,
+                contatocli)
+                VALUES
+                ("cliente2",
+                "rua 13 q 29 centro",
+                "78700000",
+                "23232332000123",
+                "66999999999",
+                "nomecliente2");
+
+SELECT * FROM usuario;
+SELECT * FROM vendedora;
